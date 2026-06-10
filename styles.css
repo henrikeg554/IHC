@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf3;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #d2691e;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.logo-icone {
+    font-size: 1.6em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #fff;
+    color: #d2691e;
+    cursor: pointer;
+}
+
+nav ul li a.link-ativo {
+    background-color: #fff3e6;
+    color: #d2691e;
+    font-weight: bold;
+}
+
+.destaque {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f3e2;
+}
+
+.destaque h1 {
+    font-size: 3em;
+    color: #d2691e;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.destaque-resumo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.destaque p {
+    font-family: 'Georgia', serif;
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    margin: 10px 0 20px;
+    max-width: 700px;
+}
+
+.destaque img {
+    width: 70%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: #d2691e;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-principal:hover {
+    background-color: #b3550f;
+}
+
+.btn-principal:active {
+    transform: scale(0.97);
+}
+
+.cardapio {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardapio h2 {
+    font-size: 2em;
+    color: #d2691e;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cardapio h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #333;
+    align-self: flex-start;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-food {
+    width: 260px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-food:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card-food img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-food h4 {
+    color: #d2691e;
+    margin: 10px 0 5px;
+}
+
+.card-food p {
+    padding: 0 10px;
+    font-size: 0.95em;
+    flex-grow: 1;
+}
+
+.preco {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.encomendas,
+.contato,
+.trabalhe {
+    padding: 40px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.encomendas h2,
+.contato h2,
+.trabalhe h2 {
+    color: #d2691e;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.secao-info {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.trabalhe {
+    text-align: center;
+}
+
+.trabalhe p {
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo label {
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+.campo textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #d2691e;
+    box-shadow: 0 0 0 2px rgba(210, 105, 30, 0.2);
+}
+
+.campo input.invalido,
+.campo select.invalido,
+.campo textarea.invalido {
+    border-color: #c0392b;
+}
+
+.erro {
+    color: #c0392b;
+    font-size: 0.85em;
+    min-height: 1em;
+}
+
+.mensagem-status {
+    text-align: center;
+    font-weight: bold;
+    min-height: 1.4em;
+}
+
+.mensagem-status.sucesso {
+    color: #2e7d32;
+}
+
+.mensagem-status.falha {
+    color: #c0392b;
+}
+
+.contato-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contato-info {
+    background-color: #fff3e6;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.contato-info p {
+    margin: 5px 0;
+}
+
+.icone {
+    margin-right: 8px;
+}
+
+footer {
+    background-color: #d2691e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.footer-sub {
+    font-size: 0.85em;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.botao-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: #d2691e;
+    color: #fff;
+    font-size: 1.3em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.botao-topo:hover {
+    background-color: #b3550f;
+}
+
+.botao-topo.visivel {
+    display: flex;
+}
+
+@media (min-width: 700px) {
+    .destaque-resumo {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .destaque img {
+        width: 45%;
+    }
+
+    .contato-conteudo {
+        flex-direction: row;
+    }
+
+    .contato-info,
+    .contato-conteudo form {
+        flex: 1;
+    }
+}
